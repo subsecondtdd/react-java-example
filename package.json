@@ -1,8 +1,6 @@
 {
   "name": "react-java-example",
   "version": "1.0.0",
-  "main": "index.js",
-  "author": "Aslak Hellesøy <aslak.hellesoy@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "react": "^16.2.0",
