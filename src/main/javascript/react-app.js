@@ -3,20 +3,19 @@ const React = require('react')
 const ReactDOM = require('react-dom')
 
 const JSDOM = jsdom.JSDOM
-const dom = new JSDOM('<!DOCTYPE html><div id="root">')
+const dom = new JSDOM('<!DOCTYPE html>')
 const document = dom.window.document
 
 function render() {
-  const $domNode = document.createElement('div')
-  $domNode.id = 'root'
-  document.body.appendChild($domNode)
+  const $root = document.createElement('div')
+  document.body.appendChild($root)
 
   ReactDOM.render(
     React.createElement('div', null, 'Hello World'),
-    $domNode
+    $root
   )
 
-  return $domNode.innerHTML
+  return $root.innerHTML
 }
 
 module.exports = { render }
