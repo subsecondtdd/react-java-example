@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
+    "hyperx": "^2.3.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
