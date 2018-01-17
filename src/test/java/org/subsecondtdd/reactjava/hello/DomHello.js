@@ -1,7 +1,3 @@
-Object.spawn = function(clazz){
-  return new clazz(...Array.prototype.slice.call(arguments, 1))
-}
-
 class DomHello {
   constructor(hello) {
     this._hello = hello
