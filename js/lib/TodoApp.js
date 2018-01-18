@@ -10,8 +10,9 @@ module.exports = class TodoApp extends React.Component {
     this.state = {todos: []}
 
     this.addTodo = () => {
-      this.props.todoList.addTodo("A STRING")
-      const todos = this.state.todoList.getTodos()
+      // TODO: Get the text from a field
+      this.props.todoList.addTodo({text: "Get milk"})
+      const todos = this.props.todoList.getTodos()
       this.setState({todos})
     }
   }
@@ -29,4 +30,4 @@ module.exports = class TodoApp extends React.Component {
 }
 
 // Functional React component
-const Todo = (todo, i) => hx`<li key="key-${i}">${todo.getText()}</li>`
+const Todo = (todo, i) => hx`<li key="key-${i}">${todo.text}</li>`

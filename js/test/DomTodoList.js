@@ -20,17 +20,16 @@ class DomTodoList {
   }
 
   addTodo(todo) {
-    // const $button = this.$root.querySelector('.add-hello')
-    // Simulate.click($button)
-    //
-    // // Only DOM event handlers should interact with the target,
-    // // return this._hello.hello()
-    // const $hello = this.$root.querySelector('li')
-    // return $hello.textContent
+    // TODO: Fill in a form with `todo.text`
+    const $button = this.$root.querySelector('.add-hello')
+    Simulate.click($button)
   }
 
   getTodos() {
-    return [{text: 'Get milk'}]
+    const lis = [...this.$root.querySelectorAll('li')]
+    return lis.map($li => {
+      return { text: $li.textContent }
+    })
   }
 }
 

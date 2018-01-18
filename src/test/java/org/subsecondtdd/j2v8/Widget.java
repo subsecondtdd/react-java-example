@@ -5,4 +5,5 @@ public interface Widget {
     String id();
     int wobble();
     int takeWobble(Wobble wobble);
+    void setWobbleThing();
 }

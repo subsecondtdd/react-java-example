@@ -35,4 +35,13 @@ public class JsProxyTest {
         Widget widget = v8Util.create("src/test/java/org/subsecondtdd/j2v8/MyWidget.js", Widget.class);
         assertEquals(88, widget.takeWobble(wobble));
     }
+
+    @Test
+    public void js_can_call_java_method_with_js_object() {
+        Wobble wobble = new Wobble();
+        Widget widget = v8Util.create("src/test/java/org/subsecondtdd/j2v8/MyWidget.js", Widget.class, null, wobble);
+        widget.setWobbleThing();
+        assertEquals(new Thing("My Thing"), wobble.getThing());
+    }
+
 }
