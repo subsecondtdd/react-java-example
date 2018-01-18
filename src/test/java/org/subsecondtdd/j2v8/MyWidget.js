@@ -15,4 +15,8 @@ module.exports = class MyWidget {
   wobble() {
     return this._wobble.wobble()
   }
+
+  takeWobble(wobble) {
+    return wobble.wobble()
+  }
 }

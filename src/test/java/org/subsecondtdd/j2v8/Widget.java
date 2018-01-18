@@ -4,4 +4,5 @@ public interface Widget {
     String description(String name);
     String id();
     int wobble();
+    int takeWobble(Wobble wobble);
 }
